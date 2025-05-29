@@ -7,6 +7,9 @@ determine winner
 
 */
 
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 4);
 
@@ -20,5 +23,12 @@ function getComputerChoice() {
 
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let humanInput = prompt("Do you want to play Rock, Paper or Scissors?");
+    let humanChoice = humanInput.toLowerCase();
 
+    return humanChoice[0].toUpperCase() + humanChoice.slice(1);
+}
+
+console.log(getComputerChoice());
+console.log(getHumanChoice());
