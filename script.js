@@ -1,17 +1,8 @@
-/*
-
-Play against the computer
-turn-based with 3 choices
-count score
-determine winner
-
-*/
-
 let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 4);
+    let computerChoice = Math.floor(Math.random() * 3);
 
     if (computerChoice === 0) {
         return "Rock";
@@ -29,10 +20,6 @@ function getHumanChoice() {
 
     return choice[0].toUpperCase() + choice.slice(1);
 }
-
-// Rock beats scissors
-// Paper beats rock
-// Scissors beats paper
 
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === "Rock" && computerChoice === "Scissors") {
